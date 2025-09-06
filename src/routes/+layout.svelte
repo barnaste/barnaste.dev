@@ -29,7 +29,6 @@
 		content="Computer Science Student at the Univerity of Toronto"
 	/>
 	<link rel="icon" href={favicon} />
-
 </svelte:head>
 
 <div class="mx-auto w-2xl">
@@ -39,22 +38,24 @@
 		<a href="/" class="text-2xl font-bold">Stefan Barna</a>
 
 		<!-- Navigation -->
-		<nav>
-			<ul class="flex gap-6">
-				{#each links as { href, label }}
-					<li>
-						<a
-							href={href}
-							class="hover:underline {isActive(href) ? 'font-semibold underline' : ''}"
-							>{label}</a
-						>
-					</li>
-				{/each}
-			</ul>
-		</nav>
+		<div class="flex items-center gap-4">
+			<nav>
+				<ul class="flex gap-6">
+					{#each links as { href, label }}
+						<li>
+							<a
+								href={href}
+								class="hover:underline {isActive(href) ? 'font-semibold underline' : ''}"
+								>{label}</a
+							>
+						</li>
+					{/each}
+				</ul>
+			</nav>
 
-		<!-- Dark Mode Toggle -->
-		 <DarkThemeToggle />
+			<!-- Dark Mode Toggle -->
+			<DarkThemeToggle />
+		</div>
 	</header>
 
 	<!-- Main Content -->
