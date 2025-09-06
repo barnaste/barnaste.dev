@@ -1,9 +1,9 @@
 <script lang="ts">
-	import '../app.css';
-	import favicon from '$lib/assets/favicon.svg';
-    import { page } from '$app/state';
-    import DarkThemeToggle from '$lib/components/DarkThemeToggle.svelte';
-	
+	import "../app.css";
+	import favicon from "$lib/assets/favicon.svg";
+	import { page } from "$app/state";
+	import DarkThemeToggle from "$lib/components/DarkThemeToggle.svelte";
+
 	let { children } = $props();
 
 	const links = [
@@ -18,7 +18,8 @@
 		// home is always matched, so treat it as a special case
 		if (href == "/") {
 			return pathname === "/";
-		} return pathname.startsWith(href);
+		}
+		return pathname.startsWith(href);
 	}
 </script>
 
@@ -33,24 +34,24 @@
 
 <div class="mx-auto w-2xl">
 	<!-- Header -->
-	<header class="flex items-center justify-between py-8">
+	<header class="flex items-center justify-between pt-12 pb-4">
 		<!-- Name -->
-		<a href="/" class="text-2xl font-bold">Stefan Barna</a>
+		<a href="/" class="text-xl font-semibold">Stefan Barna</a>
 
 		<!-- Navigation -->
 		<div class="flex items-center gap-4">
-			<nav>
-				<ul class="flex gap-6">
-					{#each links as { href, label }}
-						<li>
-							<a
-								href={href}
-								class="hover:underline {isActive(href) ? 'font-semibold underline' : ''}"
-								>{label}</a
-							>
-						</li>
-					{/each}
-				</ul>
+			<nav class="flex items-center gap-4 px-2">
+				{#each links as { href, label }}
+					<a
+						{href}
+						class="text-sm
+							{isActive(href)
+							? 'text-slate-900 dark:text-slate-50 transition-none hover:text-slate-900 dark:hover:text-slate-300'
+							: 'text-slate-400 dark:text-slate-400 transition-colors duration-200 hover:text-slate-600 dark:active:text-slate-200'}"
+					>
+						{label}
+					</a>
+				{/each}
 			</nav>
 
 			<!-- Dark Mode Toggle -->
@@ -63,4 +64,3 @@
 
 	<!-- Footer -->
 </div>
-
