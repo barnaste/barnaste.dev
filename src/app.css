@@ -1,8 +1,15 @@
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --color-olive: #ABBF84;
+}
+
 @layer base {
   body {
     @apply bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300;
+    @apply selection:bg-olive selection:text-slate-900;
   }
+
+  /* TODO: styling */
 }

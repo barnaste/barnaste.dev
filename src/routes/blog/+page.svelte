@@ -1,0 +1,1 @@
+<p>Blog posts coming soon!</p>
