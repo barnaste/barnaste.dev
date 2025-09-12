@@ -1,5 +1,6 @@
 <script lang="ts">
     import "iconify-icon";
+    import ContactLinks from "$lib/components/ContactLinks.svelte";
 </script>
 
 <!-- top-level region organization -->
@@ -16,12 +17,12 @@
                 <div class="flex flex-row items-center">
                     <div class="bg-olive rounded-full h-3 w-3 my-auto mx-3"></div>
                     <div class="relative h-auto w-fit overflow-hidden group my-auto">
-                        <span class="block border-b-2 border-dashed border-slate-400 text-base text-slate-500 dark:text-slate-400 cursor-pointer transition-none">
+                        <span class="block border-b-2 border-dashed border-slate-400 text-base text-slate-500 dark:text-slate-300 cursor-pointer transition-none">
                             <span class="block transition-transform duration-300 ease-in-out group-hover:-translate-y-5">
                                 Available for Work
                             </span>
                             <span class="block absolute top-5 transition-transform duration-300 ease-in-out group-hover:-translate-y-5" >
-                                <a href="mailto:stefan.barna@mail.utoronto.ca" class="text-slate-500 dark:text-slate-400">Contact Me →</a>
+                                <a href="mailto:stefan.barna@mail.utoronto.ca">Contact Me →</a>
                             </span>
                         </span>
                     </div>
@@ -43,6 +44,7 @@
             </div>
 
             <!-- TODO: Contact Links -->
+            <div class="mt-1 ml-4"><ContactLinks /></div>
 
             <!-- Blurb -->
             <p>
