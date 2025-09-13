@@ -6,11 +6,11 @@
 <!-- top-level region organization -->
 <div class="my-16 flex flex-col gap-24">
     <!-- About Me -->
-    <div class="flex flex-row-gap-20">
+    <div class="flex flex-row justify-between">
         <!-- Left Column -->
-        <div class="w-4/7 flex flex-col gap-y-6">
+        <div class="w-1/2 flex flex-col gap-y-6">
             <div class="flex flex-col gap-y-3">
-                <h1 class="text-5xl font-bold">Hi, I'm Stefan</h1>
+                <h1 class="text-5xl font-bold">Hi, I'm Stefan!</h1>
 
                 <!-- Available for Work -->
                 <!-- todo: on study term: available for work summer 2026 as a hover effect. maybe underline to indicate interactability? -->
@@ -43,7 +43,7 @@
                 </div>
             </div>
 
-            <!-- TODO: Contact Links -->
+            <!-- Contact Links -->
             <div class="mt-1 ml-4"><ContactLinks /></div>
 
             <!-- Blurb -->
@@ -56,7 +56,46 @@
         
         <!-- Right Column -->
         <div class="w-3/7 flex flex-col gap-y-6 pt-2">
-        </div>
+            <!-- Key Skills -->
+            <ul class="flex flex-row flex-wrap gap-2 justify-center">
+                <div class="skill-card">
+                    <iconify-icon icon="simple-icons:rust" width=24></iconify-icon>
+                    <p class="skill-card-text">Rust</p>
+                </div>
+                <div class="skill-card">
+                    <iconify-icon icon="lineicons:python" width=24></iconify-icon>
+                    <p class="skill-card-text">Python</p>
+                </div>
+                <div class="skill-card">
+                    <iconify-icon icon="streamline-logos:c-language-logo-solid" width=24></iconify-icon>
+                    <p class="skill-card-text">C</p>
+                </div>
+                <div class="skill-card">
+                    <iconify-icon icon="ri:java-fill" width=24></iconify-icon>
+                    <p class="skill-card-text">Java</p>
+                </div>
+                <div class="skill-card">
+                    <iconify-icon icon="devicon-plain:redis" width=24></iconify-icon>
+                    <p class="skill-card-text">Redis</p>
+                </div>
+                <div class="skill-card">
+                    <iconify-icon icon="devicon-plain:haskell" width=24></iconify-icon>
+                    <p class="skill-card-text">Haskell</p>
+                </div>
+                <div class="skill-card">
+                    <iconify-icon icon="akar-icons:postgresql-fill" width=24></iconify-icon>
+                    <p class="skill-card-text">PostgreSQL</p>
+                </div>
+                <div class="skill-card">
+                    <iconify-icon icon="mdi:tailwind" width=24></iconify-icon>
+                    <p class="skill-card-text">TailwindCSS</p>
+                </div>
+            </ul>
 
+            <!-- Photo -->
+            <div class="rounded-sm bg-slate-100 dark:bg-slate-800 h-1/1 flex justify-center items-center">
+                <p class="text-slate-900 dark:text-slate-100">Placeholder</p>
+            </div>
+        </div>
     </div>
 </div>
