@@ -3,6 +3,8 @@
 
 @theme {
   --color-olive: #ABBF84;
+  --color-olive-dark: #859966;
+  --color-olive-light: #C1D2A6;
 }
 
 @layer base {

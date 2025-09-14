@@ -1,5 +1,95 @@
 @import 'tailwindcss';
+@import "../../app.css";
 
 @layer base {
-  /* TODO: styling */
+  .blog-article h1, h2, h3 {
+    @apply -mb-2;
+  }
+
+  /* Headings */
+  .blog-article h1 {
+    @apply text-2xl font-semibold mt-8;
+  }
+
+  .blog-article h2 {
+    @apply text-xl font-semibold mt-6;
+  }
+
+  .blog-article h3 {
+    @apply text-lg font-semibold;
+  }
+
+  /* Stylization */
+  .blog-article p {
+    @apply my-4;
+  }
+
+  .blog-article strong {
+    @apply font-semibold;
+  }
+
+  /* Lists */
+  .blog-article li {
+    @apply my-0.5;
+  }
+  .blog-article li > ul,
+  .blog-article li > ol {
+    @apply mt-0;
+  }
+
+  .blog-article ul {
+    @apply list-disc list-outside ml-6;
+  }
+
+  .blog-article ol {
+    @apply list-decimal list-outside ml-6;
+  }
+
+  /* remove bullet from list items containing a checkbox */
+  .blog-article li > input[type="checkbox"] {
+    @apply -ml-4.5 list-none;
+  }
+
+  .blog-article li:has(> input[type="checkbox"]) {
+    @apply list-none pl-0;
+  }
+
+  /* Links */
+  .blog-article a {
+    @apply text-olive-dark dark:text-olive-light underline underline-offset-2;
+  }
+
+  /* Tables */
+  .blog-article table {
+    @apply table-auto border-collapse my-6 text-sm;
+  }
+
+  .blog-article th,
+  .blog-article td {
+    @apply px-4 py-2;
+  }
+
+  .blog-article th {
+    @apply font-semibold text-slate-700 dark:text-slate-200 text-left;
+  }
+  
+  /* add a horizontal line below the header row */
+  .blog-article thead tr {
+    @apply border-b-2 border-slate-300 dark:border-slate-700;
+  }
+
+  /* Block Quotes */
+  .blog-article blockquote {
+    @apply border-l-4 border-olive dark:border-olive-dark pl-4 my-4 italic;
+  }
+
+  .blog-article hr {
+    @apply my-8 border-0 h-1 bg-slate-200 dark:bg-slate-700 rounded-full;
+  }
+
+  /* Code Blocks */
+  .blog-article pre,
+  .blog-article code {
+    @apply text-sm;
+  }
 }

@@ -4,7 +4,7 @@
 </script>
 
 <!-- top-level region organization -->
-<div class="my-16 flex flex-col gap-24">
+<div class="flex flex-col gap-24">
     <!-- About Me -->
     <div class="flex flex-row justify-between">
         <!-- Left Column -->
@@ -13,11 +13,11 @@
                 <h1 class="text-5xl font-bold">Hi, I'm Stefan!</h1>
 
                 <!-- Available for Work -->
-                <!-- todo: on study term: available for work summer 2026 as a hover effect. maybe underline to indicate interactability? -->
+                <!-- TODO: link should be to resume, not email -->
                 <div class="flex flex-row items-center">
                     <div class="bg-olive rounded-full h-3 w-3 my-auto mx-3"></div>
                     <div class="relative h-auto w-fit overflow-hidden group my-auto">
-                        <span class="block border-b-2 border-dashed border-slate-400 text-base text-slate-500 dark:text-slate-300 cursor-pointer transition-none">
+                        <span class="block border-b-2 border-dashed border-slate-400 text-base text-slate-500 dark:text-slate-400 cursor-pointer transition-none">
                             <span class="block transition-transform duration-300 ease-in-out group-hover:-translate-y-5">
                                 Available for Work
                             </span>
@@ -94,7 +94,7 @@
 
             <!-- Photo -->
             <div class="rounded-sm bg-slate-100 dark:bg-slate-800 h-1/1 flex justify-center items-center">
-                <p class="text-slate-900 dark:text-slate-100">Placeholder</p>
+                <p class="text-slate-800 dark:text-slate-200">Placeholder</p>
             </div>
         </div>
     </div>

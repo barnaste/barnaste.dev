@@ -60,7 +60,9 @@
 	</header>
 
 	<!-- Main Content -->
-	{@render children?.()}
+	<div class="py-14">
+		{@render children?.()}
+	</div>
 
 	<!-- Footer -->
 </div>

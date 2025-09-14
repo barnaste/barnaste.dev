@@ -1,4 +1,9 @@
 <script lang="ts">
+    import "../blog.css";
+    import "prismjs"; // code syntax highlighting theme
+    import "../prism-nord.css"; // code syntax highlighting theme
+    import "prismjs/components/prism-rust"; // load Rust syntax highlighting
+
     export let data;
     const { title, date, Content } = data;
 </script>
@@ -14,9 +19,10 @@
     <p><a href="/blog">Go back to the blog index</a></p>
     
 {:else}
-    <article>
-        <h1>{title}</h1>
-        <time>Published {date}</time>
+    <!-- margin offset exists to counteract the default header padding -->
+    <article class="blog-article">
+        <h1 class="mt-2 text-3xl font-bold">{title}</h1>
+        <p class="text-slate-500 dark:text-slate-400 mb-6 mt-4">{date}</p>
 
         <Content />
     </article>
