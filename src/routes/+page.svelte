@@ -88,7 +88,7 @@
                 </div>
                 <div class="skill-card">
                     <iconify-icon icon="mdi:tailwind" width=24></iconify-icon>
-                    <p class="skill-card-text">TailwindCSS</p>
+                    <p class="skill-card-text">Tailwind CSS</p>
                 </div>
             </ul>
 
