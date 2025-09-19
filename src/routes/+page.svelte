@@ -6,11 +6,11 @@
 <!-- top-level region organization -->
 <div class="flex flex-col gap-24">
     <!-- About Me -->
-    <div class="flex flex-row justify-between">
+    <div class="flex flex-row flex-wrap justify-between">
         <!-- Left Column -->
         <div class="w-1/2 flex flex-col gap-y-6">
             <div class="flex flex-col gap-y-3">
-                <h1 class="text-5xl font-bold">Hi, I'm Stefan!</h1>
+                <h1 class="text-5xl font-bold">Hi, I'm Stefan</h1>
 
                 <!-- Available for Work -->
                 <!-- TODO: link should be to resume, not email -->
@@ -50,12 +50,12 @@
             <p>
                 I'm a student at the University of Toronto studying Computer
                 Science and Maths, with a particular interest in theoretical computer 
-                science and programming languages.
+                science and programming languages. "I am adding more text just to make this 5 lines."
             </p>
         </div>
         
         <!-- Right Column -->
-        <div class="w-3/7 flex flex-col gap-y-6 pt-2">
+        <div class="w-2/5 flex flex-col gap-y-6 pt-2">
             <!-- Key Skills -->
             <ul class="flex flex-row flex-wrap gap-2 justify-center">
                 <div class="skill-card">

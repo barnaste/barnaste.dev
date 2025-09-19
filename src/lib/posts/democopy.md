@@ -1,6 +1,6 @@
 ---
-title: Markdown Demo
-date: "13th Sep 2025"
+title: Markdown Demo (A New Copy)
+date: "2025-09-19"
 ---
 
 front-text. suppose we started typing a significantly longer than expected entry here. when would it start? when would it end? who knows? if we knew who knows we would ask...

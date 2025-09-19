@@ -32,7 +32,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="mx-auto w-2xl">
+<div class="mx-auto w-2xl max-w-full px-8 lg:px-0">
 	<!-- Header -->
 	<header class="flex items-center justify-between pt-12 pb-4">
 		<!-- Name -->
