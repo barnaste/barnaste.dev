@@ -22,9 +22,9 @@
 <!-- top-level region organization -->
 <div class="flex flex-col gap-24">
     <!-- About Me -->
-    <div class="flex flex-row flex-wrap justify-between">
+    <div class="flex flex-row flex-wrap justify-between gap-y-8 items-center max-lg:justify-center">
         <!-- Left Column -->
-        <div class="w-1/2 flex flex-col gap-y-6">
+        <div class="flex flex-col gap-y-6 w-85">
             <div class="flex flex-col gap-y-3">
                 <h1 class="text-5xl font-bold">Hi, I'm Stefan</h1>
 
@@ -72,7 +72,7 @@
         </div>
         
         <!-- Right Column -->
-        <div class="w-2/5 flex flex-col gap-y-6 pt-2">
+        <div class="flex flex-col gap-y-6 pt-2 w-70">
             <!-- Key Skills -->
             <ul class="flex flex-row flex-wrap gap-2 justify-center">
                 <div class="skill-card">
@@ -110,7 +110,8 @@
             </ul>
 
             <!-- Photo -->
-            <div class="rounded-sm bg-slate-100 dark:bg-slate-800 h-1/1 flex justify-center items-center">
+            <div class="rounded-sm bg-slate-100 dark:bg-slate-800 h-50 flex justify-center items-center
+            max-lg:w-full max-lg:scale-115 max-lg:mt-10">
                 <p class="text-slate-800 dark:text-slate-200">Placeholder</p>
             </div>
         </div>
