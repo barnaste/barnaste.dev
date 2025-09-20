@@ -1,6 +1,7 @@
 ---
 title: Markdown Demo
 date: "2025-09-13"
+description: "insert ominous description here"
 ---
 
 front-text. suppose we started typing a significantly longer than expected entry here. when would it start? when would it end? who knows? if we knew who knows we would ask...

@@ -3,6 +3,22 @@
     import ContactLinks from "$lib/components/ContactLinks.svelte";
 </script>
 
+<svelte:head>
+    <title>Stefan Barna</title>
+    <meta
+        name="description"
+        content="Computer Science Student at the Univerity of Toronto"
+    />
+    <meta name="author" content="Stefan Barna" />
+
+    <meta property="og:title" content="Stefan Barna" />
+    <meta
+        property="og:description"
+        content="Computer Science Student at the Univerity of Toronto"
+    />
+    <meta property="og:type" content="website" />
+</svelte:head>
+
 <!-- top-level region organization -->
 <div class="flex flex-col gap-24">
     <!-- About Me -->

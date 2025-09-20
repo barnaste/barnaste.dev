@@ -97,7 +97,7 @@
 @layer components {
   /* Anchor links for headings */
   .icon-link {
-    @apply text-slate-400 hover:text-slate-600 dark:text-slate-600 dark:hover:text-slate-400 no-underline absolute px-10 -translate-x-15 transition-colors duration-300;
+    @apply text-slate-400 hover:text-slate-600 dark:text-slate-600 dark:hover:text-slate-400 no-underline absolute -mx-10 px-4 transition-colors duration-300;
 	}
   
   .icon-link::before {

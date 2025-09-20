@@ -1,6 +1,6 @@
 <script lang="ts">
 	import "../app.css";
-	import favicon from "$lib/assets/favicon.svg";
+	import qed from "$lib/assets/qed.svg";
 	import { page } from "$app/state";
 	import DarkThemeToggle from "$lib/components/DarkThemeToggle.svelte";
 
@@ -24,25 +24,21 @@
 </script>
 
 <svelte:head>
-	<title>Stefan Barna</title>
-	<meta
-		name="description"
-		content="Computer Science Student at the Univerity of Toronto"
-	/>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href={qed} />
 </svelte:head>
 
 <div class="mx-auto w-2xl max-w-full px-8 lg:px-0">
 	<!-- Header -->
 	<header class="flex items-center justify-between pt-12 pb-4">
 		<!-- Name -->
-		<a href="/" class="text-xl font-semibold">Stefan Barna</a>
+		<a href="/" target="_self" class="text-xl font-semibold">Stefan Barna</a>
 
 		<!-- Navigation -->
 		<div class="flex items-center gap-4">
 			<nav class="flex items-center gap-4 px-2">
 				{#each links as { href, label }}
 					<a
+						target="_self"
 						{href}
 						class="text-sm
 							{isActive(href)

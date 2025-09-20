@@ -5,8 +5,22 @@
     import "prismjs/components/prism-rust"; // load Rust syntax highlighting
 
     export let data;
-    const { title, date, Content } = data;
+    const { title, date, description, Content } = data;
 </script>
+
+<svelte:head>
+    <title>{title} | Stefan Barna</title>
+    <meta name="description" content="{description}" />
+    <meta name="author" content="Stefan Barna" />
+
+    <meta property="og:title" content="{title} | Stefan Barna" />
+    <meta property="og:description" content="{description}" />
+    <meta property="og:type" content="article" />
+
+    <meta property="article:published_time" content={new Date(date).toISOString()} />
+
+    <base target="_blank" />
+</svelte:head>
 
 {#if data.status == 404}
     <h1 class="text-lg text-slate-500 dark:text-slate-400">404 - Not Found</h1>

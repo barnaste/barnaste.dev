@@ -1,15 +1,22 @@
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+
+import autoprefixer from 'autoprefixer';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
 	preprocess: [
-		vitePreprocess(),
+		vitePreprocess({
+			postcss: {
+				plugins: [autoprefixer]
+			}
+		}),
 		mdsvex({
 			extensions: ['.md'],
 			smartypants: true,
