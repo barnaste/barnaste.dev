@@ -31,14 +31,13 @@
 	<!-- Header -->
 	<header class="flex items-center justify-between pt-12 pb-4">
 		<!-- Name -->
-		<a href="/" target="_self" class="text-xl font-semibold">Stefan Barna</a>
+		<a href="/" class="text-xl font-semibold">Stefan Barna</a>
 
 		<!-- Navigation -->
 		<div class="flex items-center gap-4">
 			<nav class="flex items-center gap-4 px-2">
 				{#each links as { href, label }}
 					<a
-						target="_self"
 						{href}
 						class="text-sm
 							{isActive(href)

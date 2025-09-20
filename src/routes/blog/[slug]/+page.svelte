@@ -19,7 +19,6 @@
 
     <meta property="article:published_time" content={new Date(date).toISOString()} />
 
-    <base target="_blank" />
 </svelte:head>
 
 {#if data.status == 404}
