@@ -5,11 +5,14 @@
     // spin animation
     // direction === 1 => clockwise
     // direction === -1 => counter-clockwise
-    function spin(node: Element, { duration = 800, direction = 1 }) {
+    function spin(_: Element, { duration = 800, direction = 1 }) {
         return {
             duration,
             css: (t: number) => {
-                return `transform: scale(${0.5 + cubicOut(t) * 0.5}) rotate(${backOut(t) * 360 * direction}deg)`;
+                return `
+                    transform: scale(${0.5 + cubicOut(t) * 0.5})
+                    rotate(${backOut(t) * 360 * direction}deg)
+                `;
             },
         };
     }

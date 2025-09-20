@@ -1,6 +1,14 @@
 <script lang="ts">
     import "iconify-icon";
     import ContactLinks from "$lib/components/ContactLinks.svelte";
+
+    import { onMount } from "svelte";
+    import { stagger } from "$lib/utils";
+    let visible = false;
+    onMount(() => {
+        visible = true;
+    });
+
 </script>
 
 <svelte:head>
@@ -23,9 +31,10 @@
 <div class="flex flex-col gap-24">
     <!-- About Me -->
     <div class="flex flex-row flex-wrap justify-between gap-y-8 items-center max-lg:justify-center">
+        {#if visible}
         <!-- Left Column -->
         <div class="flex flex-col gap-y-6 w-85">
-            <div class="flex flex-col gap-y-3">
+            <div class="flex flex-col gap-y-3" transition:stagger>
                 <h1 class="text-5xl font-bold">Hi, I'm Stefan</h1>
 
                 <!-- Available for Work -->
@@ -45,7 +54,8 @@
                 </div>
             </div>
 
-            <div class="flex flex-col gap-y-3 px-4">
+                <!-- Location and University -->
+            <div class="flex flex-col gap-y-3 px-4" transition:stagger={{ delay: 100 }}>
                 <!-- Location -->
                 <div class="flex flex-row gap-x-2">
                     <iconify-icon icon="lucide:map-pin" width=24></iconify-icon>
@@ -60,10 +70,10 @@
             </div>
 
             <!-- Contact Links -->
-            <div class="mt-1 ml-4"><ContactLinks /></div>
+            <div class="mt-1 ml-4" transition:stagger={{ delay: 200 }}><ContactLinks /></div>
 
             <!-- Blurb -->
-            <p>
+            <p transition:stagger={{ delay: 300 }} class="text-slate-600 dark:text-slate-400">
                 I'm a student at the University of Toronto studying Computer
                 Science and Maths, with a particular interest in theory
                 and programming languages, and a habit of pulling at threads
@@ -74,7 +84,7 @@
         <!-- Right Column -->
         <div class="flex flex-col gap-y-6 pt-2 w-70">
             <!-- Key Skills -->
-            <ul class="flex flex-row flex-wrap gap-2 justify-center">
+            <ul class="flex flex-row flex-wrap gap-2 justify-center" transition:stagger={{ delay: 200 }}>
                 <div class="skill-card">
                     <iconify-icon icon="simple-icons:rust" width=24></iconify-icon>
                     <p class="skill-card-text">Rust</p>
@@ -111,9 +121,10 @@
 
             <!-- Photo -->
             <div class="rounded-sm bg-slate-100 dark:bg-slate-800 h-50 flex justify-center items-center
-            max-lg:w-full max-lg:scale-115 max-lg:mt-10">
+            max-lg:w-full max-lg:scale-115 max-lg:mt-10" transition:stagger={{ delay: 300 }}>
                 <p class="text-slate-800 dark:text-slate-200">Placeholder</p>
             </div>
         </div>
+        {/if}
     </div>
 </div>
