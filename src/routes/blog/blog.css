@@ -93,3 +93,23 @@
     @apply text-sm;
   }
 }
+
+@layer components {
+  /* Anchor links for headings */
+  .icon-link {
+    @apply text-slate-400 hover:text-slate-600 dark:text-slate-600 dark:hover:text-slate-400 no-underline absolute px-10 -translate-x-15 transition-colors duration-300;
+	}
+  
+  .icon-link::before {
+    /* by default, hide the icon */
+    content: '#';
+    opacity: 0;
+  }
+
+	h1:hover .icon-link::before,
+  h2:hover .icon-link::before,
+  h3:hover .icon-link::before {
+    /* show the icon on header hover */
+		opacity: 1;
+	}
+}

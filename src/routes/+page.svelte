@@ -22,7 +22,7 @@
                                 Available for Work
                             </span>
                             <span class="block absolute top-5 transition-transform duration-300 ease-in-out group-hover:-translate-y-5" >
-                                <a href="mailto:stefan.barna@mail.utoronto.ca">Contact Me →</a>
+                                <a href="mailto:stefan.barna@mail.utoronto.ca">View Resume 🖶</a>
                             </span>
                         </span>
                     </div>
@@ -49,8 +49,9 @@
             <!-- Blurb -->
             <p>
                 I'm a student at the University of Toronto studying Computer
-                Science and Maths, with a particular interest in theoretical computer 
-                science and programming languages. "I am adding more text just to make this 5 lines."
+                Science and Maths, with a particular interest in theory
+                and programming languages, and a habit of pulling at threads
+                until the whole fabric is laid bare.
             </p>
         </div>
         
