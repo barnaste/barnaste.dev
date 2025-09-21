@@ -85,38 +85,38 @@
         <div class="flex flex-col gap-y-6 pt-2 w-70">
             <!-- Key Skills -->
             <ul class="flex flex-row flex-wrap gap-2 justify-center" transition:stagger={{ delay: 200 }}>
-                <div class="skill-card">
+                <li class="skill-card">
                     <iconify-icon icon="simple-icons:rust" width=24></iconify-icon>
                     <p class="skill-card-text">Rust</p>
-                </div>
-                <div class="skill-card">
+                </li>
+                <li class="skill-card">
                     <iconify-icon icon="lineicons:python" width=24></iconify-icon>
                     <p class="skill-card-text">Python</p>
-                </div>
-                <div class="skill-card">
+                </li>
+                <li class="skill-card">
                     <iconify-icon icon="streamline-logos:c-language-logo-solid" width=24></iconify-icon>
                     <p class="skill-card-text">C</p>
-                </div>
-                <div class="skill-card">
+                </li>
+                <li class="skill-card">
                     <iconify-icon icon="ri:java-fill" width=24></iconify-icon>
                     <p class="skill-card-text">Java</p>
-                </div>
-                <div class="skill-card">
+                </li>
+                <li class="skill-card">
                     <iconify-icon icon="devicon-plain:redis" width=24></iconify-icon>
                     <p class="skill-card-text">Redis</p>
-                </div>
-                <div class="skill-card">
+                </li>
+                <li class="skill-card">
                     <iconify-icon icon="devicon-plain:haskell" width=24></iconify-icon>
                     <p class="skill-card-text">Haskell</p>
-                </div>
-                <div class="skill-card">
+                </li>
+                <li class="skill-card">
                     <iconify-icon icon="akar-icons:postgresql-fill" width=24></iconify-icon>
                     <p class="skill-card-text">PostgreSQL</p>
-                </div>
-                <div class="skill-card">
+                </li>
+                <li class="skill-card">
                     <iconify-icon icon="mdi:tailwind" width=24></iconify-icon>
                     <p class="skill-card-text">Tailwind CSS</p>
-                </div>
+                </li>
             </ul>
 
             <!-- Photo -->

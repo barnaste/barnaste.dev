@@ -26,7 +26,7 @@
     }
 </script>
 
-<button onclick={toggleDark}>
+<button onclick={toggleDark} aria-label="Toggle Dark Mode">
     <div
         class="transition-all duration-200 hover:scale-110
         text-slate-700 hover:text-slate-950

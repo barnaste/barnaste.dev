@@ -42,7 +42,7 @@
 						class="text-sm
 							{isActive(href)
 							? 'text-slate-900 dark:text-slate-50 transition-none hover:text-slate-900 dark:hover:text-slate-50 font-medium'
-							: 'text-slate-400 dark:text-slate-400 transition-colors duration-200 hover:text-slate-600 dark:hover:text-slate-200 font-normal'}"
+							: 'text-slate-500 dark:text-slate-400 transition-colors duration-200 hover:text-slate-700 dark:hover:text-slate-200 font-normal'}"
 					>
 						{label}
 					</a>
