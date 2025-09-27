@@ -2,6 +2,10 @@
 @import "../../app.css";
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   .blog-article h1, h2, h3 {
     @apply -mb-2;
   }

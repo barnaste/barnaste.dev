@@ -3,12 +3,20 @@
     import ContactLinks from "$lib/components/ContactLinks.svelte";
 
     import { onMount } from "svelte";
-    import { stagger } from "$lib/utils";
+    import { stagger } from "$lib/utils/stagger";
     let visible = false;
     onMount(() => {
         visible = true;
     });
 
+    import { isMobile } from "$lib/utils/media";
+    // per-component delays
+    $: titleDelay   = $isMobile ? 0 : 0;
+    $: statsDelay   = $isMobile ? 75 : 100;
+    $: contactDelay = $isMobile ? 150 : 200;
+    $: blurbDelay   = $isMobile ? 225 : 300;
+    $: skillDelay   = $isMobile ? 300 : 200;
+    $: photoDelay   = $isMobile ? 375 : 300;
 </script>
 
 <svelte:head>
@@ -34,7 +42,7 @@
         {#if visible}
         <!-- Left Column -->
         <div class="flex flex-col gap-y-6 w-85">
-            <div class="flex flex-col gap-y-3" transition:stagger>
+            <div class="flex flex-col gap-y-3" transition:stagger={{ delay: titleDelay }}>
                 <h1 class="text-5xl font-bold">Hi, I'm Stefan</h1>
 
                 <!-- Available for Work -->
@@ -54,8 +62,8 @@
                 </div>
             </div>
 
-                <!-- Location and University -->
-            <div class="flex flex-col gap-y-3 px-4" transition:stagger={{ delay: 100 }}>
+            <!-- Location and University -->
+            <div class="flex flex-col gap-y-3 px-4" transition:stagger={{ delay: statsDelay }}>
                 <!-- Location -->
                 <div class="flex flex-row gap-x-2">
                     <iconify-icon icon="lucide:map-pin" width=24></iconify-icon>
@@ -70,10 +78,10 @@
             </div>
 
             <!-- Contact Links -->
-            <div class="mt-1 ml-4" transition:stagger={{ delay: 200 }}><ContactLinks /></div>
+            <div class="mt-1 ml-4" transition:stagger={{ delay: contactDelay }}><ContactLinks /></div>
 
             <!-- Blurb -->
-            <p transition:stagger={{ delay: 300 }} class="text-slate-600 dark:text-slate-400">
+            <p transition:stagger={{ delay: blurbDelay }} class="text-slate-600 dark:text-slate-400">
                 I'm a student at the University of Toronto studying Computer
                 Science and Maths, with a particular interest in theory
                 and programming languages, and a habit of pulling at threads
@@ -84,7 +92,7 @@
         <!-- Right Column -->
         <div class="flex flex-col gap-y-6 pt-2 w-70">
             <!-- Key Skills -->
-            <ul class="flex flex-row flex-wrap gap-2 justify-center" transition:stagger={{ delay: 200 }}>
+            <ul class="flex flex-row flex-wrap gap-2 justify-center" transition:stagger={{ delay: skillDelay }}>
                 <li class="skill-card">
                     <iconify-icon icon="simple-icons:rust" width=24></iconify-icon>
                     <p class="skill-card-text">Rust</p>
@@ -121,7 +129,7 @@
 
             <!-- Photo -->
             <div class="rounded-sm bg-slate-100 dark:bg-slate-800 h-50 flex justify-center items-center
-            max-lg:w-full max-lg:scale-115 max-lg:mt-10" transition:stagger={{ delay: 300 }}>
+            max-lg:w-full max-lg:scale-115 max-lg:mt-10" transition:stagger={{ delay: photoDelay }}>
                 <p class="text-slate-800 dark:text-slate-200">Placeholder</p>
             </div>
         </div>

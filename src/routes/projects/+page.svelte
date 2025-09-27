@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import { stagger } from "$lib/utils";
+    import { stagger } from "$lib/utils/stagger";
     let visible = false;
     onMount(() => {
         visible = true;

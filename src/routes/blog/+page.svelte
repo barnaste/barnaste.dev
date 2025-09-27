@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { stagger } from '$lib/utils';
+    import { stagger } from '$lib/utils/stagger.js';
     
     export let data;
 
