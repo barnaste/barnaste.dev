@@ -1,6 +1,6 @@
 <script lang="ts">
 	import "../app.css";
-	import forall from "$lib/assets/forall.svg";
+	import forall from "$lib/assets/qed.svg";
 	import { page } from "$app/state";
 	import DarkThemeToggle from "$lib/components/DarkThemeToggle.svelte";
 
@@ -24,7 +24,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={forall} />
+	<link rel="icon" href={qed} />
 </svelte:head>
 
 <div class="mx-auto w-2xl max-w-full px-8 lg:px-0">
