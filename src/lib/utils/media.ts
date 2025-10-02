@@ -1,15 +1,20 @@
 import { readable } from "svelte/store";
+import { onMount } from "svelte";
 
 export function mediaQuery(query: string) {
   return readable(false, (set) => {
-    const mql = window.matchMedia(query);
+    let mql: MediaQueryList;
 
-    const update = () => set(mql.matches);
+    // run on client only after mounting
+    onMount(() => {
+      mql = window.matchMedia(query);
+      const update = () => set(mql.matches);
 
-    update(); // initial
-    mql.addEventListener("change", update);
+      update(); // initial check
+      mql.addEventListener("change", update);
 
-    return () => mql.removeEventListener("change", update);
+      return () => mql.removeEventListener("change", update);
+    });
   });
 }
 
