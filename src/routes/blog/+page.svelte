@@ -29,10 +29,10 @@
     {#if visible}
         <div 
             class="mb-6 hover:translate-x-1 group translate-y-4 transition-all ease-out"
-            transition:stagger={{ delay: (index + 1) * 100 }}
+            transition:stagger={{ delay: (index + 1) * (100 - Math.min(index, 5) * 10) }}
         >
             <a href="/blog/{post.path}">
-                <span class="group-hover:text-olive-dark transition-colors">{post.meta.title}</span>
+                <span class="group-hover:text-olive-dark dark:group-hover:text-olive transition-colors">{post.meta.title}</span>
                 <p class="text-slate-500 dark:text-slate-400">{new Date(post.meta.date).toDateString()}</p>
             </a>
         </div>

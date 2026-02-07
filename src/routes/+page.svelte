@@ -13,10 +13,10 @@
     // per-component delays
     $: titleDelay   = $isMobile ? 0 : 0;
     $: statsDelay   = $isMobile ? 75 : 100;
-    $: contactDelay = $isMobile ? 150 : 200;
-    $: blurbDelay   = $isMobile ? 225 : 300;
-    $: skillDelay   = $isMobile ? 300 : 200;
-    $: photoDelay   = $isMobile ? 375 : 300;
+    $: contactDelay = $isMobile ? 150 : 150;
+    $: blurbDelay   = $isMobile ? 225 : 200;
+    $: skillDelay   = $isMobile ? 300 : 150;
+    $: photoDelay   = $isMobile ? 375 : 200;
 </script>
 
 <svelte:head>
@@ -82,10 +82,8 @@
 
             <!-- Blurb -->
             <p transition:stagger={{ delay: blurbDelay }} class="text-slate-600 dark:text-slate-400">
-                I'm a student at the University of Toronto studying Computer
-                Science and Maths, with a particular interest in theory
-                and programming languages, and a habit of pulling at threads
-                until the whole fabric is laid bare.
+                I'm a student at the University of Toronto studying Maths and Computer Science, with a particular interest in theory and logic.
+                I enjoy reading modern classics and philosophy. At some point I'll end up writing about them here.
             </p>
         </div>
         

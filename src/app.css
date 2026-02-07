@@ -16,7 +16,7 @@
 
 @layer components {
   .contact-link {
-    @apply transition-colors duration-300 hover:text-slate-500 text-slate-800 hover:dark:text-slate-300 dark:text-slate-200;
+    @apply transition-colors duration-300 hover:text-olive-dark text-slate-800 hover:dark:text-olive dark:text-slate-200;
   }
 
   .skill-card {
