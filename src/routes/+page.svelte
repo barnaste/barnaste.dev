@@ -50,9 +50,9 @@
                 <div class="flex flex-row items-center">
                     <div class="bg-olive rounded-full h-3 w-3 my-auto mx-3"></div>
                     <div class="relative h-auto w-fit overflow-hidden group my-auto">
-                        <span class="block border-b-2 border-dashed border-slate-400 text-base text-slate-500 dark:text-slate-400 cursor-pointer transition-none">
-                            <span class="block transition-transform duration-300 ease-in-out group-hover:-translate-y-5">
-                                Available for Work
+                        <span class="block border-b-2 border-dashed border-olive-400 text-base text-olive-500 dark:text-olive-400 cursor-pointer transition-none">
+                            <span class="block transition-transform duration-300 ease-in-out group-hover:-translate-y-5 min-w-26">
+                                On Study Term
                             </span>
                             <span class="block absolute top-5 transition-transform duration-300 ease-in-out group-hover:-translate-y-5" >
                                 <a href="mailto:stefan.barna@mail.utoronto.ca">View Resume 🖶</a>
@@ -81,7 +81,7 @@
             <div class="mt-1 ml-4" transition:stagger={{ delay: contactDelay }}><ContactLinks /></div>
 
             <!-- Blurb -->
-            <p transition:stagger={{ delay: blurbDelay }} class="text-slate-600 dark:text-slate-400">
+            <p transition:stagger={{ delay: blurbDelay }} class="text-olive-600 dark:text-olive-400">
                 I'm a student at the University of Toronto studying Maths and Computer Science, with a particular interest in theory and logic.
                 I enjoy reading modern classics and philosophy. At some point I'll end up writing about them here.
             </p>
@@ -126,9 +126,9 @@
             </ul>
 
             <!-- Photo -->
-            <div class="rounded-sm bg-slate-100 dark:bg-slate-800 h-50 flex justify-center items-center
+            <div class="rounded-sm bg-olive-100 dark:bg-olive-800 h-50 flex justify-center items-center
             max-lg:w-full max-lg:scale-115 max-lg:mt-10" transition:stagger={{ delay: photoDelay }}>
-                <p class="text-slate-800 dark:text-slate-200">Placeholder</p>
+                <p class="text-olive-800 dark:text-olive-200">Placeholder</p>
             </div>
         </div>
         {/if}

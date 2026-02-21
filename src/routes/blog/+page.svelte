@@ -32,8 +32,8 @@
             transition:stagger={{ delay: (index + 1) * (100 - Math.min(index, 5) * 10) }}
         >
             <a href="/blog/{post.path}">
-                <span class="group-hover:text-olive-dark dark:group-hover:text-olive transition-colors">{post.meta.title}</span>
-                <p class="text-slate-500 dark:text-slate-400">{new Date(post.meta.date).toDateString()}</p>
+                <span class="group-hover:text-olive-dark dark:group-hover:text-olive-light transition-colors">{post.meta.title}</span>
+                <p class="text-olive-500 dark:text-olive-400">{new Date(post.meta.date).toDateString()}</p>
             </a>
         </div>
     {/if}

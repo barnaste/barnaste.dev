@@ -41,8 +41,8 @@
 						{href}
 						class="text-sm
 							{isActive(href)
-							? 'text-slate-900 dark:text-slate-50 transition-none hover:text-slate-900 dark:hover:text-slate-50 font-medium'
-							: 'text-slate-500 dark:text-slate-400 transition-colors duration-200 hover:text-slate-700 dark:hover:text-slate-200 font-normal'}"
+							? 'text-olive-900 dark:text-olive-50 transition-none hover:text-olive-900 dark:hover:text-olive-50 font-medium'
+							: 'text-olive-500 dark:text-olive-400 transition-colors duration-200 hover:text-olive-700 dark:hover:text-olive-200 font-normal'}"
 					>
 						{label}
 					</a>

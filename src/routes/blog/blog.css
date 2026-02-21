@@ -74,12 +74,12 @@
   }
 
   .blog-article th {
-    @apply font-semibold text-slate-700 dark:text-slate-200 text-left;
+    @apply font-semibold text-olive-700 dark:text-olive-200 text-left;
   }
   
   /* add a horizontal line below the header row */
   .blog-article thead tr {
-    @apply border-b-2 border-slate-300 dark:border-slate-700;
+    @apply border-b-2 border-olive-300 dark:border-olive-700;
   }
 
   /* Block Quotes */
@@ -88,7 +88,7 @@
   }
 
   .blog-article hr {
-    @apply my-8 border-0 h-1 bg-slate-200 dark:bg-slate-700 rounded-full;
+    @apply my-8 border-0 h-1 bg-olive-200 dark:bg-olive-700 rounded-full;
   }
 
   /* Code Blocks */
@@ -101,7 +101,7 @@
 @layer components {
   /* Anchor links for headings */
   .icon-link {
-    @apply text-slate-400 hover:text-slate-600 dark:text-slate-600 dark:hover:text-slate-400 no-underline absolute -mx-10 px-4 transition-colors duration-300;
+    @apply text-olive-400 hover:text-olive-600 dark:text-olive-600 dark:hover:text-olive-400 no-underline absolute -mx-10 px-4 transition-colors duration-300;
 	}
   
   .icon-link::before {

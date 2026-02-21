@@ -29,8 +29,8 @@
 <button onclick={toggleDark} aria-label="Toggle Dark Mode">
     <div
         class="transition-all duration-200 hover:scale-110
-        text-slate-700 hover:text-slate-950
-        dark:text-slate-200 dark:hover:text-slate-50"
+        text-olive-700 hover:text-olive-950
+        dark:text-olive-200 dark:hover:text-olive-50"
     >
         {#if darkMode}
             <div in:spin={{ duration: 800, direction: -1 }}>
