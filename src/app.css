@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 @import 'tailwindcss';
+@plugin 'tailwind-scrollbar' {
+  nocompatible: true;
+}
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -34,11 +37,14 @@
 @layer base {
   html {
     @apply font-serif;
+    scrollbar-gutter: stable both-edges;
   }
 
   body {
     @apply bg-olive-50 text-olive-900 dark:bg-olive-900 dark:text-olive-100 transition-colors duration-300;
     @apply selection:bg-olive selection:text-olive-900;
+
+    @apply scrollbar-thumb-olive-300 dark:scrollbar-thumb-olive-700 scrollbar-thin scrollbar-thumb-rounded scrollbar-track-transparent;
   }
 }
 
@@ -66,4 +72,7 @@
   .project-card {
     @apply rounded-lg ring-1 ring-olive-200 dark:ring-olive-700 shadow-lg/5 p-5;
   }
+}
+
+@layer utilities {
 }
