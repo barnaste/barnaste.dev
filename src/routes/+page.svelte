@@ -51,10 +51,10 @@
                     <div class="bg-olive rounded-full h-3 w-3 my-auto mx-3"></div>
                     <div class="relative h-auto w-fit overflow-hidden group my-auto">
                         <span class="block border-b-2 border-dashed border-olive-400 text-base text-olive-500 dark:text-olive-400 cursor-pointer transition-none">
-                            <span class="block transition-transform duration-300 ease-in-out group-hover:-translate-y-5 min-w-26">
+                            <span class="block transition-transform duration-300 ease-in-out group-hover:-translate-y-full min-w-26">
                                 On Study Term
                             </span>
-                            <span class="block absolute top-5 transition-transform duration-300 ease-in-out group-hover:-translate-y-5" >
+                            <span class="block absolute top-full transition-transform duration-300 ease-in-out group-hover:-translate-y-full" >
                                 <a href="mailto:stefan.barna@mail.utoronto.ca">View Resume 🖶</a>
                             </span>
                         </span>
