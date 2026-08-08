@@ -8,12 +8,12 @@ export async function load({ params }) {
             Content,
             title,
             date,
-            description
+            description,
         };
     } catch (error) {
         return {
             status: 404,
-            error: new Error("Post not found")
+            error: new Error("Post not found"),
         };
     }
 }

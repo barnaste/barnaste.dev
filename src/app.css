@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin 'tailwind-scrollbar' {
   nocompatible: true;
 }
@@ -12,7 +12,7 @@
   --color-olive-light: #b1b180;
 
   /* Olive palette (tailwind-like scale) */
-  --color-olive-50:  #fbfbf9;
+  --color-olive-50: #fbfbf9;
   --color-olive-100: #f4f4f0;
   --color-olive-200: #e8e8e3;
   --color-olive-300: #d8d8d0;
@@ -68,7 +68,7 @@
   .section-label {
     @apply bg-olive-100 w-fit py-1 px-3 rounded-sm text-sm text-olive-600 dark:bg-olive-800 dark:text-olive-200;
   }
-  
+
   .project-card {
     @apply rounded-lg ring-1 ring-olive-200 dark:ring-olive-700 shadow-lg/5 p-5;
   }

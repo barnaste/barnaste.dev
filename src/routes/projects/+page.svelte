@@ -5,7 +5,6 @@
     onMount(() => {
         visible = true;
     });
-
 </script>
 
 <svelte:head>

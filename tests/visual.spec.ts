@@ -119,5 +119,9 @@ test("heading anchor hover", async ({ page }) => {
 test("blog article link hover", async ({ page }) => {
     await page.goto("/blog/demo");
     await settle(page);
-    await hoverShot(page, page.locator(".blog-article a[href='https://www.google.com']").first(), "hover-article-link.png");
+    await hoverShot(
+        page,
+        page.locator(".blog-article a[href='https://www.google.com']").first(),
+        "hover-article-link.png",
+    );
 });

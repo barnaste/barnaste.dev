@@ -1,14 +1,13 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
-    import { stagger } from '$lib/utils/stagger.js';
-    
+    import { onMount } from "svelte";
+    import { stagger } from "$lib/utils/stagger.js";
+
     export let data;
 
     let visible = false;
     onMount(() => {
         visible = true;
     });
-
 </script>
 
 <svelte:head>
@@ -25,15 +24,20 @@
     <h1 class="text-2xl font-semibold mb-8" transition:stagger>My Writing</h1>
 {/if}
 
-{#each data.posts as post, index}
+{#each data.posts as post, index (post.path)}
     {#if visible}
-        <div 
+        <div
             class="mb-6 hover:translate-x-1 group translate-y-4 transition-all ease-out"
             transition:stagger={{ delay: (index + 1) * (100 - Math.min(index, 5) * 10) }}
         >
             <a href="/blog/{post.path}">
-                <span class="group-hover:text-olive-dark dark:group-hover:text-olive-light transition-colors">{post.meta.title}</span>
-                <p class="text-olive-500 dark:text-olive-400">{new Date(post.meta.date).toDateString()}</p>
+                <span
+                    class="group-hover:text-olive-dark dark:group-hover:text-olive-light transition-colors"
+                    >{post.meta.title}</span
+                >
+                <p class="text-olive-500 dark:text-olive-400">
+                    {new Date(post.meta.date).toDateString()}
+                </p>
             </a>
         </div>
     {/if}

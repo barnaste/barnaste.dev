@@ -1,0 +1,11 @@
+package-lock.json
+
+# vendored prism theme
+src/routes/blog/prism-nord.css
+
+# reflowing tables and lists would change what mdsvex renders
+src/lib/posts
+
+.svelte-kit
+build
+screenshots

@@ -9,7 +9,7 @@ export function stagger(_: Element, { duration = 500, delay = 0 } = {}) {
             return `
                 transform: translateY(${(1 - eased) * 20}px);
                 opacity: ${eased};
-            `
-        }
+            `;
+        },
     };
 }
