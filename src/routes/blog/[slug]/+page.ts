@@ -1,3 +1,5 @@
+import { error } from "@sveltejs/kit";
+
 export async function load({ params }) {
     try {
         const post = await import(`$lib/posts/${params.slug}.md`);
@@ -10,10 +12,7 @@ export async function load({ params }) {
             date,
             description,
         };
-    } catch (error) {
-        return {
-            status: 404,
-            error: new Error("Post not found"),
-        };
+    } catch {
+        error(404, "Post not found");
     }
 }
