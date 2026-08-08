@@ -73,6 +73,3 @@
     @apply rounded-lg ring-1 ring-olive-200 dark:ring-olive-700 shadow-lg/5 p-5;
   }
 }
-
-@layer utilities {
-}
