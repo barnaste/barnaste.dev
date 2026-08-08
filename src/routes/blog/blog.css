@@ -1,5 +1,4 @@
-@import "tailwindcss";
-@import "../../app.css";
+@reference "../../app.css";
 
 @layer base {
   html {
@@ -7,8 +6,8 @@
   }
 
   .blog-article h1,
-  h2,
-  h3 {
+  .blog-article h2,
+  .blog-article h3 {
     @apply -mb-2;
   }
 
