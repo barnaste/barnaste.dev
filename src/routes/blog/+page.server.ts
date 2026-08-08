@@ -1,12 +1,13 @@
-import { fetchMarkdownPosts } from "$lib/utils";
-import { json } from "@sveltejs/kit";
+import { fetchMarkdownPosts } from "$lib/utils/posts";
 
-export const GET = async () => {
+export const load = async () => {
     const posts = await fetchMarkdownPosts();
 
     const sortedPosts = posts.sort((a, b) => {
         return new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime();
     });
 
-    return json(sortedPosts);
+    return {
+        posts: sortedPosts,
+    };
 };
