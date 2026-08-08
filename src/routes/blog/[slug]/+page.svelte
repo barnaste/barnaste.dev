@@ -1,8 +1,6 @@
 <script lang="ts">
     import "../blog.css";
-    import "prismjs"; // code syntax highlighting theme
     import "../prism-nord.css"; // code syntax highlighting theme
-    import "prismjs/components/prism-rust"; // load Rust syntax highlighting
 
     export let data;
     const { title, date, description, Content } = data;
