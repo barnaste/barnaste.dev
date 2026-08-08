@@ -1,6 +1,7 @@
 import { fetchMarkdownPosts } from "$lib/utils/posts";
+import type { PageServerLoad } from "./$types";
 
-export const load = async () => {
+export const load: PageServerLoad = async () => {
     const posts = await fetchMarkdownPosts();
 
     const sortedPosts = posts.sort((a, b) => {

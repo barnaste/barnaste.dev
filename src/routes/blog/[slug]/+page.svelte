@@ -1,8 +1,9 @@
 <script lang="ts">
     import "../blog.css";
     import "../prism-nord.css"; // code syntax highlighting theme
+    import type { PageData } from "./$types";
 
-    export let data;
+    export let data: PageData;
     const { title, date, description, Content } = data;
 </script>
 

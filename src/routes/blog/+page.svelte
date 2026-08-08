@@ -1,8 +1,9 @@
 <script lang="ts">
     import { onMount } from "svelte";
     import { stagger } from "$lib/utils/stagger.js";
+    import type { PageData } from "./$types";
 
-    export let data;
+    export let data: PageData;
 
     let visible = false;
     onMount(() => {
