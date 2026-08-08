@@ -6,6 +6,16 @@
         %sveltekit.head%
     </head>
     <body data-sveltekit-preload-data="hover">
+        <script>
+            // runs before paint so a stored or system dark preference never flashes light
+            const theme = localStorage.getItem("theme");
+            if (
+                theme === "dark" ||
+                (theme === null && matchMedia("(prefers-color-scheme: dark)").matches)
+            ) {
+                document.body.classList.add("dark");
+            }
+        </script>
         <div style="display: contents">%sveltekit.body%</div>
     </body>
 </html>

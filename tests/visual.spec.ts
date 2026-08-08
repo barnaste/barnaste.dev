@@ -68,6 +68,39 @@ for (const { path, name } of routes) {
     });
 }
 
+test.describe("system dark preference", () => {
+    test.use({ colorScheme: "dark" });
+
+    test("first visit follows the os setting", async ({ page }) => {
+        await page.goto("/");
+        await settle(page);
+        await expect(page).toHaveScreenshot("home-os-dark.png", {
+            fullPage: true,
+            animations: "disabled",
+        });
+    });
+
+    test("an explicit choice overrides the os setting", async ({ page }) => {
+        await page.goto("/");
+        await settle(page);
+        await enterDark(page);
+        await page.reload();
+        await settle(page);
+
+        await expect(page.locator("body")).not.toHaveClass(/dark/);
+    });
+});
+
+test("theme choice survives a reload", async ({ page }) => {
+    await page.goto("/");
+    await settle(page);
+    await enterDark(page);
+    await page.reload();
+    await settle(page);
+
+    await expect(page.locator("body")).toHaveClass(/dark/);
+});
+
 test("nav inactive link hover", async ({ page }) => {
     await page.goto("/");
     await settle(page);

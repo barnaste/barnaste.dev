@@ -1,6 +1,7 @@
 <script lang="ts">
     import { Sun, Moon } from "@lucide/svelte";
     import { backOut, cubicOut } from "svelte/easing";
+    import { browser } from "$app/environment";
 
     // spin animation
     // direction === 1 => clockwise
@@ -17,12 +18,14 @@
         };
     }
 
-    // toggle between light and dark modes
-    let darkMode = $state(false);
+    // toggle between light and dark modes. the theme script in app.html has
+    // already applied the class, so the initial icon follows from it
+    let darkMode = $state(browser && document.body.classList.contains("dark"));
 
     function toggleDark() {
         document.body.classList.toggle("dark");
         darkMode = !darkMode;
+        localStorage.setItem("theme", darkMode ? "dark" : "light");
     }
 </script>
 
