@@ -44,6 +44,10 @@
     @apply bg-olive-50 text-olive-900 dark:bg-olive-900 dark:text-olive-100;
     @apply selection:bg-olive selection:text-olive-900;
 
+    /* 100vw counts the scrollbar and 100% does not, so this is its width, or zero when
+       there is none. padding it back keeps content centred on the window either way */
+    padding-left: calc(100vw - 100%);
+
     @apply scrollbar-thumb-olive-300 dark:scrollbar-thumb-olive-700 scrollbar-thin scrollbar-thumb-rounded scrollbar-track-transparent;
   }
 }
@@ -76,6 +80,9 @@
   .theme-sweep {
     @apply pointer-events-none fixed inset-0 z-50 overflow-hidden;
     @apply bg-olive-50 text-olive-900 dark:bg-olive-900 dark:text-olive-100;
+
+    /* the copy has to sit where body sits, so it carries the same compensation */
+    padding-left: calc(100vw - 100%);
   }
 }
 
