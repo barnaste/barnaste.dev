@@ -12,8 +12,8 @@ const routes = [
 // entry transitions are driven by requestAnimationFrame, so they emit no
 // transitionend to wait on. longest is a 375ms delay over a 500ms duration.
 const ENTRY_MS = 1200;
-// theme toggle spins for 800ms while the body cross-fades for 300ms
-const THEME_MS = 1000;
+// the 800ms sweep, plus the icon spin which only starts once the line clears the toggle
+const THEME_MS = 1400;
 const HOVER_MS = 400;
 
 async function settle(page: Page) {
@@ -23,7 +23,7 @@ async function settle(page: Page) {
 }
 
 async function enterDark(page: Page) {
-    await page.getByLabel("Toggle Dark Mode").click();
+    await page.getByRole("button", { name: "Toggle Dark Mode" }).click();
     await page.mouse.move(0, 0);
     await page.waitForTimeout(THEME_MS);
 }
@@ -116,7 +116,11 @@ test("nav active link hover", async ({ page }) => {
 test("theme toggle hover", async ({ page }) => {
     await page.goto("/");
     await settle(page);
-    await hoverShot(page, page.getByLabel("Toggle Dark Mode"), "hover-theme-toggle.png");
+    await hoverShot(
+        page,
+        page.getByRole("button", { name: "Toggle Dark Mode" }),
+        "hover-theme-toggle.png",
+    );
 });
 
 test("resume reveal hover", async ({ page }) => {

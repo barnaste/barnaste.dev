@@ -2,6 +2,7 @@
     import { Sun, Moon } from "@lucide/svelte";
     import { backOut, cubicOut } from "svelte/easing";
     import { browser } from "$app/environment";
+    import { toggleTheme } from "$lib/utils/theme";
 
     // spin animation
     // direction === 1 => clockwise
@@ -22,14 +23,16 @@
     // already applied the class, so the initial icon follows from it
     let darkMode = $state(browser && document.body.classList.contains("dark"));
 
+    let button: HTMLButtonElement;
+
     function toggleDark() {
-        document.body.classList.toggle("dark");
-        darkMode = !darkMode;
-        localStorage.setItem("theme", darkMode ? "dark" : "light");
+        toggleTheme(button, (dark) => {
+            darkMode = dark;
+        });
     }
 </script>
 
-<button onclick={toggleDark} aria-label="Toggle Dark Mode">
+<button bind:this={button} onclick={toggleDark} aria-label="Toggle Dark Mode">
     <div
         class="transition-all duration-200 hover:scale-110
         text-olive-700 hover:text-olive-950

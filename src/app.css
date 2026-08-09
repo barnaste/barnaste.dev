@@ -4,7 +4,8 @@
 @plugin 'tailwind-scrollbar' {
   nocompatible: true;
 }
-@custom-variant dark (&:where(.dark, .dark *));
+/* the nearest theme class wins, so a light sweep overlay can sit inside a dark body */
+@custom-variant dark (&:where(.dark, .dark *):not(:where(.light, .light *)));
 
 @theme {
   --color-olive: #8b8b65;
@@ -37,11 +38,10 @@
 @layer base {
   html {
     @apply font-serif;
-    scrollbar-gutter: stable both-edges;
   }
 
   body {
-    @apply bg-olive-50 text-olive-900 dark:bg-olive-900 dark:text-olive-100 transition-colors duration-300;
+    @apply bg-olive-50 text-olive-900 dark:bg-olive-900 dark:text-olive-100;
     @apply selection:bg-olive selection:text-olive-900;
 
     @apply scrollbar-thumb-olive-300 dark:scrollbar-thumb-olive-700 scrollbar-thin scrollbar-thumb-rounded scrollbar-track-transparent;
@@ -72,4 +72,17 @@
   .project-card {
     @apply rounded-lg ring-1 ring-olive-200 dark:ring-olive-700 shadow-lg/5 p-5;
   }
+
+  .theme-sweep {
+    @apply pointer-events-none fixed inset-0 z-50 overflow-hidden;
+    @apply bg-olive-50 text-olive-900 dark:bg-olive-900 dark:text-olive-100;
+  }
+}
+
+/* unlayered so it outranks the transition utilities it has to silence */
+.theme-swapping,
+.theme-swapping *,
+.theme-swapping *::before,
+.theme-swapping *::after {
+  transition: none;
 }
